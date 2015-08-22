@@ -15,6 +15,10 @@
 		447DA60E1B88C7B000943378 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 447DA60D1B88C7B000943378 /* Images.xcassets */; };
 		447DA6111B88C7B000943378 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 447DA60F1B88C7B000943378 /* LaunchScreen.xib */; };
 		447DA61D1B88C7B000943378 /* MathMusicProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DA61C1B88C7B000943378 /* MathMusicProjectTests.swift */; };
+		447DA6271B88C9D200943378 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DA6261B88C9D200943378 /* MenuScene.swift */; };
+		447DA6291B88C9E600943378 /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 447DA6281B88C9E600943378 /* MenuScene.sks */; };
+		447DA62F1B88CEB800943378 /* menuBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 447DA62E1B88CEB800943378 /* menuBackground.jpg */; };
+		447DA6331B88D99800943378 /* Note1.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 447DA6321B88D99800943378 /* Note1.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 		447DA6161B88C7B000943378 /* MathMusicProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathMusicProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		447DA61B1B88C7B000943378 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		447DA61C1B88C7B000943378 /* MathMusicProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathMusicProjectTests.swift; sourceTree = "<group>"; };
+		447DA6261B88C9D200943378 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		447DA6281B88C9E600943378 /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
+		447DA62E1B88CEB800943378 /* menuBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = menuBackground.jpg; sourceTree = "<group>"; };
+		447DA6321B88D99800943378 /* Note1.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Note1.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +89,14 @@
 		447DA5FF1B88C7B000943378 /* MathMusicProject */ = {
 			isa = PBXGroup;
 			children = (
+				447DA62A1B88CE0D00943378 /* Images */,
+				447DA6311B88D95700943378 /* New Group */,
 				447DA6021B88C7B000943378 /* AppDelegate.swift */,
+				447DA6081B88C7B000943378 /* GameViewController.swift */,
 				447DA6041B88C7B000943378 /* GameScene.sks */,
 				447DA6061B88C7B000943378 /* GameScene.swift */,
-				447DA6081B88C7B000943378 /* GameViewController.swift */,
+				447DA6281B88C9E600943378 /* MenuScene.sks */,
+				447DA6261B88C9D200943378 /* MenuScene.swift */,
 				447DA60A1B88C7B000943378 /* Main.storyboard */,
 				447DA60D1B88C7B000943378 /* Images.xcassets */,
 				447DA60F1B88C7B000943378 /* LaunchScreen.xib */,
@@ -116,6 +128,38 @@
 				447DA61B1B88C7B000943378 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		447DA62A1B88CE0D00943378 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				447DA6341B88D9BF00943378 /* Notes */,
+				447DA62B1B88CE1B00943378 /* Backgrounds */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		447DA62B1B88CE1B00943378 /* Backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				447DA62E1B88CEB800943378 /* menuBackground.jpg */,
+			);
+			name = Backgrounds;
+			sourceTree = "<group>";
+		};
+		447DA6311B88D95700943378 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		447DA6341B88D9BF00943378 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				447DA6321B88D99800943378 /* Note1.atlas */,
+			);
+			name = Notes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,9 +242,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				447DA6331B88D99800943378 /* Note1.atlas in Resources */,
 				447DA6111B88C7B000943378 /* LaunchScreen.xib in Resources */,
 				447DA60E1B88C7B000943378 /* Images.xcassets in Resources */,
 				447DA6051B88C7B000943378 /* GameScene.sks in Resources */,
+				447DA6291B88C9E600943378 /* MenuScene.sks in Resources */,
+				447DA62F1B88CEB800943378 /* menuBackground.jpg in Resources */,
 				447DA60C1B88C7B000943378 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				447DA6071B88C7B000943378 /* GameScene.swift in Sources */,
+				447DA6271B88C9D200943378 /* MenuScene.swift in Sources */,
 				447DA6091B88C7B000943378 /* GameViewController.swift in Sources */,
 				447DA6031B88C7B000943378 /* AppDelegate.swift in Sources */,
 			);
