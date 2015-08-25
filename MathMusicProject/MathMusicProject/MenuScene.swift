@@ -11,7 +11,9 @@ import AVFoundation
 
 class MenuScene: SKScene {
     
-    var startMode1: SKSpriteNode = SKSpriteNode()
+    var attackGame: SKSpriteNode = SKSpriteNode()
+    var eaterGame: SKSpriteNode = SKSpriteNode()
+    var stringGame: SKSpriteNode = SKSpriteNode()
     
     
     //ARMAZENA AS TEXTURAS/FRAMES DAS ANIMACOES
@@ -58,12 +60,14 @@ class MenuScene: SKScene {
     override func didMoveToView(view: SKView) {
         super.didMoveToView(view)
         
-        startMode1 = childNodeWithName("startMode1") as! SKSpriteNode
+        attackGame = childNodeWithName("attackGame") as! SKSpriteNode
+        eaterGame = childNodeWithName("eaterGame") as! SKSpriteNode
+        stringGame = childNodeWithName("stringGame") as! SKSpriteNode
         
         //CRIA ANIMACAO DAS NOTAS
         var note1AnimatedAtlas = SKTextureAtlas (named: "Note1")
         self.prepareFrames(note1AnimatedAtlas)
-        self.activeAnimation(startMode1, animation: note1Animation, key: "note1Anim")
+        self.activeAnimation(attackGame, animation: note1Animation, key: "note1Anim")
         
 
         
@@ -176,11 +180,34 @@ class MenuScene: SKScene {
         var node = self.nodeAtPoint(touchLocation)
         
         
+        if attackGame.containsPoint(touchLocation){
+            animationScene(attackGame, function: "attack")
+        }
+        
+        if eaterGame.containsPoint(touchLocation){
+            animationScene(attackGame, function: "eater")
+        }
+        
+        if stringGame.containsPoint(touchLocation){
+            animationScene(attackGame, function: "string")
+        }
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 //        if start.containsPoint(touchLocation){
 //            AudioNode!.playSound(RummyAudio.SoundsEnum.SelectButton)
 //            animationScene(start, function: "start")
 //        }
-//        
+//
 //        if options.containsPoint(touchLocation){
 //            AudioNode!.playSound(RummyAudio.SoundsEnum.SelectButton)
 //            animationScene(options, function: "options")
@@ -198,60 +225,52 @@ class MenuScene: SKScene {
         
     }
     
-//    //CHAMA CENA DOS LEVELS
-//    func callLevels(){
-//        var levelScene = LevelScene.unarchiveFromFile("LevelScene") as! LevelScene
-//        view!.presentScene(levelScene, transition: transition1)
-//    }
-//    
-//    //CHAMA CENA DAS CONFIGURACOES
-//    func callOptions(){
-//        var optionsScene = OptionsScene.unarchiveFromFile("OptionsScene") as! OptionsScene
-//        view!.presentScene(optionsScene, transition: transition2)
-//    }
-//    
-//    //CHAMA CENA DO TUTORIAL
-//    func callTutorial(){
-//        var tutorialScene = TutorialScene.unarchiveFromFile("TutorialScene") as! TutorialScene
-//        view!.presentScene(tutorialScene, transition: transition1)
-//    }
-//    
-//    //CHAMA CENA DOS CREDITOS
-//    func callCredits(){
-//        var creditosScene = CreditosScene.unarchiveFromFile("CreditosScene") as! CreditosScene
-//        view!.presentScene(creditosScene, transition: transition1)
-//    }
+    //CHAMA CENA DOS LEVELS
+    func callAttackGame(){ 
+        var attackGame = AttackGameScene.unarchiveFromFile("AttackGameScene") as! AttackGameScene
+        view!.presentScene(attackGame, transition: transition1)
+    }
     
-//    ANIMACAO DOS BOTOES
-//    func animationScene(button: SKNode, function: String) -> Void{
-//        
-//        var gameScene: SKAction = SKAction()
-//        
-//        switch(function){
-//        case "start":
-//            gameScene = SKAction.runBlock({ self.callLevels() })
-//            break
-//        case "options":
-//            gameScene = SKAction.runBlock({ self.callOptions() })
-//            break
-//        case "tutorial":
-//            gameScene = SKAction.runBlock({ self.callTutorial() })
-//            break
-//        case "credits":
-//            gameScene = SKAction.runBlock({ self.callCredits() })
-//            break
-//        default:
-//            println("A cena: \(function) nao existe!")
-//            break
-//        }
-//        
-//        var resizeButton = Array<SKAction>()
-//        resizeButton.append(SKAction.scaleTo(1.0, duration: 0.2))
-//        resizeButton.append(SKAction.scaleTo(0.75, duration: 0.2))
-//        resizeButton.append(gameScene)
-//        
-//        button.runAction(SKAction.sequence(resizeButton))
-//    }
+    //CHAMA CENA DAS CONFIGURACOES
+    func callEaterGame(){
+        var eaterScene = EaterGameScene.unarchiveFromFile("EaterGameScene") as! EaterGameScene
+        view!.presentScene(eaterScene, transition: transition2)
+    }
+
+    //CHAMA CENA DO TUTORIAL
+    func callStringGame(){
+        var stringGame = StringGameScene.unarchiveFromFile("StringGameScene") as! StringGameScene
+        view!.presentScene(stringGame, transition: transition1)
+    }
+
+    
+    //ANIMACAO DOS BOTOES
+    func animationScene(button: SKNode, function: String) -> Void{
+        
+        var gameScene: SKAction = SKAction()
+        
+        switch(function){
+        case "attack":
+            gameScene = SKAction.runBlock({ self.callAttackGame() })
+            break
+        case "eater":
+            gameScene = SKAction.runBlock({ self.callEaterGame() })
+            break
+        case "string":
+            gameScene = SKAction.runBlock({ self.callStringGame() })
+            break
+        default:
+            println("A cena: \(function) nao existe!")
+            break
+        }
+        
+        var resizeButton = Array<SKAction>()
+        resizeButton.append(SKAction.scaleTo(1.0, duration: 0.2))
+        resizeButton.append(SKAction.scaleTo(0.75, duration: 0.2))
+        resizeButton.append(gameScene)
+        
+        button.runAction(SKAction.sequence(resizeButton))
+    }
     
     //PREPARA AS IMAGENS DO PACOTE ATLAS
     func prepareFrames(atlas: SKTextureAtlas){

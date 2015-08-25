@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44112D851B8CA7DA00263C02 /* StringGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 44112D841B8CA7DA00263C02 /* StringGameScene.sks */; };
+		44112D871B8CA7FB00263C02 /* StringGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44112D861B8CA7FB00263C02 /* StringGameScene.swift */; };
+		44112D8A1B8CAD6D00263C02 /* backgroundGame2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44112D891B8CAD6D00263C02 /* backgroundGame2.jpg */; };
+		44112D8C1B8CADE400263C02 /* backgroundGame3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44112D8B1B8CADE400263C02 /* backgroundGame3.jpg */; };
+		44112D8E1B8CAFC900263C02 /* AttackGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44112D8D1B8CAFC900263C02 /* AttackGameScene.swift */; };
+		44112D901B8CB00400263C02 /* EaterGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44112D8F1B8CB00400263C02 /* EaterGameScene.swift */; };
+		44112D921B8CB02100263C02 /* EaterGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 44112D911B8CB02100263C02 /* EaterGameScene.sks */; };
+		44112D941B8CB13600263C02 /* AttackGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 44112D931B8CB13600263C02 /* AttackGameScene.sks */; };
+		44112D961B8CBAC400263C02 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 44112D951B8CBAC400263C02 /* back.png */; };
 		447DA6031B88C7B000943378 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DA6021B88C7B000943378 /* AppDelegate.swift */; };
 		447DA6051B88C7B000943378 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 447DA6041B88C7B000943378 /* GameScene.sks */; };
 		447DA6071B88C7B000943378 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DA6061B88C7B000943378 /* GameScene.swift */; };
@@ -32,6 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44112D841B8CA7DA00263C02 /* StringGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StringGameScene.sks; sourceTree = "<group>"; };
+		44112D861B8CA7FB00263C02 /* StringGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringGameScene.swift; sourceTree = "<group>"; };
+		44112D891B8CAD6D00263C02 /* backgroundGame2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundGame2.jpg; sourceTree = "<group>"; };
+		44112D8B1B8CADE400263C02 /* backgroundGame3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundGame3.jpg; sourceTree = "<group>"; };
+		44112D8D1B8CAFC900263C02 /* AttackGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttackGameScene.swift; sourceTree = "<group>"; };
+		44112D8F1B8CB00400263C02 /* EaterGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EaterGameScene.swift; sourceTree = "<group>"; };
+		44112D911B8CB02100263C02 /* EaterGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EaterGameScene.sks; sourceTree = "<group>"; };
+		44112D931B8CB13600263C02 /* AttackGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = AttackGameScene.sks; sourceTree = "<group>"; };
+		44112D951B8CBAC400263C02 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		447DA5FD1B88C7B000943378 /* MathMusicProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathMusicProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		447DA6011B88C7B000943378 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		447DA6021B88C7B000943378 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +86,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44112D881B8CAD5400263C02 /* PlaceHolder */ = {
+			isa = PBXGroup;
+			children = (
+				44112D951B8CBAC400263C02 /* back.png */,
+				44112D8B1B8CADE400263C02 /* backgroundGame3.jpg */,
+				44112D891B8CAD6D00263C02 /* backgroundGame2.jpg */,
+			);
+			name = PlaceHolder;
+			sourceTree = "<group>";
+		};
 		447DA5F41B88C7B000943378 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +125,12 @@
 				447DA6061B88C7B000943378 /* GameScene.swift */,
 				447DA6281B88C9E600943378 /* MenuScene.sks */,
 				447DA6261B88C9D200943378 /* MenuScene.swift */,
+				44112D841B8CA7DA00263C02 /* StringGameScene.sks */,
+				44112D861B8CA7FB00263C02 /* StringGameScene.swift */,
+				44112D931B8CB13600263C02 /* AttackGameScene.sks */,
+				44112D8D1B8CAFC900263C02 /* AttackGameScene.swift */,
+				44112D911B8CB02100263C02 /* EaterGameScene.sks */,
+				44112D8F1B8CB00400263C02 /* EaterGameScene.swift */,
 				447DA60A1B88C7B000943378 /* Main.storyboard */,
 				447DA60D1B88C7B000943378 /* Images.xcassets */,
 				447DA60F1B88C7B000943378 /* LaunchScreen.xib */,
@@ -133,6 +167,7 @@
 		447DA62A1B88CE0D00943378 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				44112D881B8CAD5400263C02 /* PlaceHolder */,
 				447DA6341B88D9BF00943378 /* Notes */,
 				447DA62B1B88CE1B00943378 /* Backgrounds */,
 			);
@@ -243,8 +278,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				447DA6331B88D99800943378 /* Note1.atlas in Resources */,
+				44112D8C1B8CADE400263C02 /* backgroundGame3.jpg in Resources */,
+				44112D941B8CB13600263C02 /* AttackGameScene.sks in Resources */,
+				44112D851B8CA7DA00263C02 /* StringGameScene.sks in Resources */,
+				44112D921B8CB02100263C02 /* EaterGameScene.sks in Resources */,
 				447DA6111B88C7B000943378 /* LaunchScreen.xib in Resources */,
+				44112D961B8CBAC400263C02 /* back.png in Resources */,
 				447DA60E1B88C7B000943378 /* Images.xcassets in Resources */,
+				44112D8A1B8CAD6D00263C02 /* backgroundGame2.jpg in Resources */,
 				447DA6051B88C7B000943378 /* GameScene.sks in Resources */,
 				447DA6291B88C9E600943378 /* MenuScene.sks in Resources */,
 				447DA62F1B88CEB800943378 /* menuBackground.jpg in Resources */,
@@ -267,8 +308,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				447DA6071B88C7B000943378 /* GameScene.swift in Sources */,
+				44112D871B8CA7FB00263C02 /* StringGameScene.swift in Sources */,
 				447DA6271B88C9D200943378 /* MenuScene.swift in Sources */,
 				447DA6091B88C7B000943378 /* GameViewController.swift in Sources */,
+				44112D8E1B8CAFC900263C02 /* AttackGameScene.swift in Sources */,
+				44112D901B8CB00400263C02 /* EaterGameScene.swift in Sources */,
 				447DA6031B88C7B000943378 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,6 +513,7 @@
 				447DA6221B88C7B000943378 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		447DA6231B88C7B000943378 /* Build configuration list for PBXNativeTarget "MathMusicProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +522,7 @@
 				447DA6251B88C7B000943378 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
