@@ -16,6 +16,8 @@
 		44112D921B8CB02100263C02 /* EaterGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 44112D911B8CB02100263C02 /* EaterGameScene.sks */; };
 		44112D941B8CB13600263C02 /* AttackGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 44112D931B8CB13600263C02 /* AttackGameScene.sks */; };
 		44112D961B8CBAC400263C02 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 44112D951B8CBAC400263C02 /* back.png */; };
+		4449180E1B8F40FB00DD81E1 /* eaterGameScene.png in Resources */ = {isa = PBXBuildFile; fileRef = 4449180D1B8F40FB00DD81E1 /* eaterGameScene.png */; };
+		444918101B8F41FA00DD81E1 /* stringGameScene.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4449180F1B8F41FA00DD81E1 /* stringGameScene.jpg */; };
 		447DA6031B88C7B000943378 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DA6021B88C7B000943378 /* AppDelegate.swift */; };
 		447DA6051B88C7B000943378 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 447DA6041B88C7B000943378 /* GameScene.sks */; };
 		447DA6071B88C7B000943378 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DA6061B88C7B000943378 /* GameScene.swift */; };
@@ -50,6 +52,8 @@
 		44112D911B8CB02100263C02 /* EaterGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EaterGameScene.sks; sourceTree = "<group>"; };
 		44112D931B8CB13600263C02 /* AttackGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = AttackGameScene.sks; sourceTree = "<group>"; };
 		44112D951B8CBAC400263C02 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		4449180D1B8F40FB00DD81E1 /* eaterGameScene.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eaterGameScene.png; sourceTree = "<group>"; };
+		4449180F1B8F41FA00DD81E1 /* stringGameScene.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stringGameScene.jpg; sourceTree = "<group>"; };
 		447DA5FD1B88C7B000943378 /* MathMusicProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathMusicProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		447DA6011B88C7B000943378 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		447DA6021B88C7B000943378 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				44112D951B8CBAC400263C02 /* back.png */,
+				4449180F1B8F41FA00DD81E1 /* stringGameScene.jpg */,
+				4449180D1B8F40FB00DD81E1 /* eaterGameScene.png */,
 				44112D8B1B8CADE400263C02 /* backgroundGame3.jpg */,
 				44112D891B8CAD6D00263C02 /* backgroundGame2.jpg */,
 			);
@@ -279,12 +285,14 @@
 			files = (
 				447DA6331B88D99800943378 /* Note1.atlas in Resources */,
 				44112D8C1B8CADE400263C02 /* backgroundGame3.jpg in Resources */,
+				4449180E1B8F40FB00DD81E1 /* eaterGameScene.png in Resources */,
 				44112D941B8CB13600263C02 /* AttackGameScene.sks in Resources */,
 				44112D851B8CA7DA00263C02 /* StringGameScene.sks in Resources */,
 				44112D921B8CB02100263C02 /* EaterGameScene.sks in Resources */,
 				447DA6111B88C7B000943378 /* LaunchScreen.xib in Resources */,
 				44112D961B8CBAC400263C02 /* back.png in Resources */,
 				447DA60E1B88C7B000943378 /* Images.xcassets in Resources */,
+				444918101B8F41FA00DD81E1 /* stringGameScene.jpg in Resources */,
 				44112D8A1B8CAD6D00263C02 /* backgroundGame2.jpg in Resources */,
 				447DA6051B88C7B000943378 /* GameScene.sks in Resources */,
 				447DA6291B88C9E600943378 /* MenuScene.sks in Resources */,
