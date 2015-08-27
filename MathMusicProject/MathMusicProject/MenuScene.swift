@@ -11,9 +11,11 @@ import AVFoundation
 
 class MenuScene: SKScene {
     
-    var attackGame: SKSpriteNode = SKSpriteNode()
+    var selectionScene: SKSpriteNode = SKSpriteNode()
     var eaterGame: SKSpriteNode = SKSpriteNode()
     var stringGame: SKSpriteNode = SKSpriteNode()
+    var shopMusic: SKSpriteNode = SKSpriteNode()
+    
     
     
     //ARMAZENA AS TEXTURAS/FRAMES DAS ANIMACOES
@@ -60,14 +62,15 @@ class MenuScene: SKScene {
     override func didMoveToView(view: SKView) {
         super.didMoveToView(view)
         
-        attackGame = childNodeWithName("attackGame") as! SKSpriteNode
+        selectionScene = childNodeWithName("selectionScene") as! SKSpriteNode
         eaterGame = childNodeWithName("eaterGame") as! SKSpriteNode
         stringGame = childNodeWithName("stringGame") as! SKSpriteNode
+        shopMusic = childNodeWithName("shopMusic") as! SKSpriteNode
         
         //CRIA ANIMACAO DAS NOTAS
         var note1AnimatedAtlas = SKTextureAtlas (named: "Note1")
         self.prepareFrames(note1AnimatedAtlas)
-        self.activeAnimation(attackGame, animation: note1Animation, key: "note1Anim")
+        self.activeAnimation(selectionScene, animation: note1Animation, key: "note1Anim")
         
 
         
@@ -177,19 +180,22 @@ class MenuScene: SKScene {
         
         var touch = touches.first as! UITouch
         var touchLocation = touch.locationInNode(self)
-        var node = self.nodeAtPoint(touchLocation)
         
         
-        if attackGame.containsPoint(touchLocation){
-            animationScene(attackGame, function: "attack")
+        if selectionScene.containsPoint(touchLocation){
+            animationScene(selectionScene, function: "selection")
         }
         
         if eaterGame.containsPoint(touchLocation){
-            animationScene(attackGame, function: "eater")
+            animationScene(selectionScene, function: "eater")
         }
         
         if stringGame.containsPoint(touchLocation){
-            animationScene(attackGame, function: "string")
+            animationScene(selectionScene, function: "string")
+        }
+        
+        if shopMusic.containsPoint(touchLocation){
+            animationScene(shopMusic, function: "shop")
         }
 
         
@@ -225,22 +231,28 @@ class MenuScene: SKScene {
         
     }
     
-    //CHAMA CENA DOS LEVELS
-    func callAttackGame(){ 
-        var attackGame = AttackGameScene.unarchiveFromFile("AttackGameScene") as! AttackGameScene
-        view!.presentScene(attackGame, transition: transition1)
+    //CHAMA CENA DO JOGO TOWER DEFENSE
+    func callSelectionScene(){
+        var selectionScene = SelectionScene.unarchiveFromFile("SelectionScene") as! SelectionScene
+        view!.presentScene(selectionScene, transition: transition1)
     }
     
-    //CHAMA CENA DAS CONFIGURACOES
+    //CHAMA CENA DO JOGO "PAC-MAN"
     func callEaterGame(){
         var eaterScene = EaterGameScene.unarchiveFromFile("EaterGameScene") as! EaterGameScene
         view!.presentScene(eaterScene, transition: transition2)
     }
 
-    //CHAMA CENA DO TUTORIAL
+    //CHAMA CENA DO JOGO "CORDA BAMBA"
     func callStringGame(){
         var stringGame = StringGameScene.unarchiveFromFile("StringGameScene") as! StringGameScene
         view!.presentScene(stringGame, transition: transition1)
+    }
+    
+    //CHAMA CENA DA LOJA DE COMPRAS
+    func callShopMusicScene(){
+        var shopMusicScene = ShopMusicScene.unarchiveFromFile("ShopMusicScene") as! ShopMusicScene
+        view!.presentScene(shopMusicScene, transition: transition1)
     }
 
     
@@ -250,14 +262,17 @@ class MenuScene: SKScene {
         var gameScene: SKAction = SKAction()
         
         switch(function){
-        case "attack":
-            gameScene = SKAction.runBlock({ self.callAttackGame() })
+        case "selection":
+            gameScene = SKAction.runBlock({ self.callSelectionScene() })
             break
         case "eater":
             gameScene = SKAction.runBlock({ self.callEaterGame() })
             break
         case "string":
             gameScene = SKAction.runBlock({ self.callStringGame() })
+            break
+        case "shop":
+            gameScene = SKAction.runBlock({ self.callShopMusicScene() })
             break
         default:
             println("A cena: \(function) nao existe!")

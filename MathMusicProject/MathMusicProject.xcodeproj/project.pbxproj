@@ -19,6 +19,12 @@
 		4449180E1B8F40FB00DD81E1 /* eaterGameScene.png in Resources */ = {isa = PBXBuildFile; fileRef = 4449180D1B8F40FB00DD81E1 /* eaterGameScene.png */; };
 		444918101B8F41FA00DD81E1 /* stringGameScene.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4449180F1B8F41FA00DD81E1 /* stringGameScene.jpg */; };
 		444918121B8F475100DD81E1 /* colcheia.png in Resources */ = {isa = PBXBuildFile; fileRef = 444918111B8F475100DD81E1 /* colcheia.png */; };
+		444918141B8F58D800DD81E1 /* ShopMusicScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444918131B8F58D800DD81E1 /* ShopMusicScene.swift */; };
+		444918161B8F58F400DD81E1 /* ShopMusicScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 444918151B8F58F400DD81E1 /* ShopMusicScene.sks */; };
+		444918181B8F6CD400DD81E1 /* backgroundShopMusic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 444918171B8F6CD400DD81E1 /* backgroundShopMusic.jpg */; };
+		4449181C1B8F70AA00DD81E1 /* shopMusic.png in Resources */ = {isa = PBXBuildFile; fileRef = 4449181B1B8F70AA00DD81E1 /* shopMusic.png */; };
+		4449181E1B8F7FC500DD81E1 /* SelectionScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4449181D1B8F7FC500DD81E1 /* SelectionScene.sks */; };
+		444918201B8F7FD600DD81E1 /* SelectionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4449181F1B8F7FD600DD81E1 /* SelectionScene.swift */; };
 		447DA6031B88C7B000943378 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DA6021B88C7B000943378 /* AppDelegate.swift */; };
 		447DA6051B88C7B000943378 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 447DA6041B88C7B000943378 /* GameScene.sks */; };
 		447DA6071B88C7B000943378 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DA6061B88C7B000943378 /* GameScene.swift */; };
@@ -56,6 +62,12 @@
 		4449180D1B8F40FB00DD81E1 /* eaterGameScene.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eaterGameScene.png; sourceTree = "<group>"; };
 		4449180F1B8F41FA00DD81E1 /* stringGameScene.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stringGameScene.jpg; sourceTree = "<group>"; };
 		444918111B8F475100DD81E1 /* colcheia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = colcheia.png; sourceTree = "<group>"; };
+		444918131B8F58D800DD81E1 /* ShopMusicScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopMusicScene.swift; sourceTree = "<group>"; };
+		444918151B8F58F400DD81E1 /* ShopMusicScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ShopMusicScene.sks; sourceTree = "<group>"; };
+		444918171B8F6CD400DD81E1 /* backgroundShopMusic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundShopMusic.jpg; sourceTree = "<group>"; };
+		4449181B1B8F70AA00DD81E1 /* shopMusic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shopMusic.png; sourceTree = "<group>"; };
+		4449181D1B8F7FC500DD81E1 /* SelectionScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SelectionScene.sks; sourceTree = "<group>"; };
+		4449181F1B8F7FD600DD81E1 /* SelectionScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionScene.swift; sourceTree = "<group>"; };
 		447DA5FD1B88C7B000943378 /* MathMusicProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathMusicProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		447DA6011B88C7B000943378 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		447DA6021B88C7B000943378 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,8 +109,10 @@
 			children = (
 				44112D951B8CBAC400263C02 /* back.png */,
 				4449180F1B8F41FA00DD81E1 /* stringGameScene.jpg */,
+				444918171B8F6CD400DD81E1 /* backgroundShopMusic.jpg */,
 				4449180D1B8F40FB00DD81E1 /* eaterGameScene.png */,
 				44112D8B1B8CADE400263C02 /* backgroundGame3.jpg */,
+				4449181B1B8F70AA00DD81E1 /* shopMusic.png */,
 				444918111B8F475100DD81E1 /* colcheia.png */,
 				44112D891B8CAD6D00263C02 /* backgroundGame2.jpg */,
 			);
@@ -136,10 +150,14 @@
 				447DA6261B88C9D200943378 /* MenuScene.swift */,
 				44112D841B8CA7DA00263C02 /* StringGameScene.sks */,
 				44112D861B8CA7FB00263C02 /* StringGameScene.swift */,
+				4449181D1B8F7FC500DD81E1 /* SelectionScene.sks */,
+				4449181F1B8F7FD600DD81E1 /* SelectionScene.swift */,
 				44112D931B8CB13600263C02 /* AttackGameScene.sks */,
 				44112D8D1B8CAFC900263C02 /* AttackGameScene.swift */,
 				44112D911B8CB02100263C02 /* EaterGameScene.sks */,
 				44112D8F1B8CB00400263C02 /* EaterGameScene.swift */,
+				444918151B8F58F400DD81E1 /* ShopMusicScene.sks */,
+				444918131B8F58D800DD81E1 /* ShopMusicScene.swift */,
 				447DA60A1B88C7B000943378 /* Main.storyboard */,
 				447DA60D1B88C7B000943378 /* Images.xcassets */,
 				447DA60F1B88C7B000943378 /* LaunchScreen.xib */,
@@ -287,10 +305,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				447DA6331B88D99800943378 /* Note1.atlas in Resources */,
+				4449181E1B8F7FC500DD81E1 /* SelectionScene.sks in Resources */,
 				44112D8C1B8CADE400263C02 /* backgroundGame3.jpg in Resources */,
 				4449180E1B8F40FB00DD81E1 /* eaterGameScene.png in Resources */,
 				44112D941B8CB13600263C02 /* AttackGameScene.sks in Resources */,
 				44112D851B8CA7DA00263C02 /* StringGameScene.sks in Resources */,
+				444918181B8F6CD400DD81E1 /* backgroundShopMusic.jpg in Resources */,
 				44112D921B8CB02100263C02 /* EaterGameScene.sks in Resources */,
 				447DA6111B88C7B000943378 /* LaunchScreen.xib in Resources */,
 				444918121B8F475100DD81E1 /* colcheia.png in Resources */,
@@ -300,8 +320,10 @@
 				44112D8A1B8CAD6D00263C02 /* backgroundGame2.jpg in Resources */,
 				447DA6051B88C7B000943378 /* GameScene.sks in Resources */,
 				447DA6291B88C9E600943378 /* MenuScene.sks in Resources */,
+				444918161B8F58F400DD81E1 /* ShopMusicScene.sks in Resources */,
 				447DA62F1B88CEB800943378 /* menuBackground.jpg in Resources */,
 				447DA60C1B88C7B000943378 /* Main.storyboard in Resources */,
+				4449181C1B8F70AA00DD81E1 /* shopMusic.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,8 +343,10 @@
 			files = (
 				447DA6071B88C7B000943378 /* GameScene.swift in Sources */,
 				44112D871B8CA7FB00263C02 /* StringGameScene.swift in Sources */,
+				444918141B8F58D800DD81E1 /* ShopMusicScene.swift in Sources */,
 				447DA6271B88C9D200943378 /* MenuScene.swift in Sources */,
 				447DA6091B88C7B000943378 /* GameViewController.swift in Sources */,
+				444918201B8F7FD600DD81E1 /* SelectionScene.swift in Sources */,
 				44112D8E1B8CAFC900263C02 /* AttackGameScene.swift in Sources */,
 				44112D901B8CB00400263C02 /* EaterGameScene.swift in Sources */,
 				447DA6031B88C7B000943378 /* AppDelegate.swift in Sources */,
