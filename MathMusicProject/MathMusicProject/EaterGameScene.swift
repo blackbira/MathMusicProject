@@ -11,27 +11,48 @@ import AVFoundation
 
 class EaterGameScene: SKScene {
     
+    //BOTOES
     var back: SKSpriteNode = SKSpriteNode()
+
+    
+    //NOTAS
+    var colcheia = SKTexture (imageNamed: "colcheia.png")
+    
+    
+    //TIMER
+    var timer: NSTimer = NSTimer()
+    var timeNote = 0;
+    
+    //TEMPORARIO
+    var countTimeNoteLabel: SKLabelNode = SKLabelNode()
     
     
     
-    var musicOn: SKSpriteNode = SKSpriteNode()
-    var soundOn: SKSpriteNode = SKSpriteNode()
-    var colorBlindOn: SKSpriteNode = SKSpriteNode()
     
-    var soundGame: Bool = Bool()
-    var musicGame: Bool = Bool()
-    var colorBlind: Bool = Bool()
-    var daltonicoMode: Bool = Bool()
-    
-    let defaults = NSUserDefaults.standardUserDefaults()
-    var audioPlayer = AVAudioPlayer()
+//    var musicOn: SKSpriteNode = SKSpriteNode()
+//    var soundOn: SKSpriteNode = SKSpriteNode()
+//    var colorBlindOn: SKSpriteNode = SKSpriteNode()
+//    
+//    var soundGame: Bool = Bool()
+//    var musicGame: Bool = Bool()
+//    var colorBlind: Bool = Bool()
+//    var daltonicoMode: Bool = Bool()
+//    
+//    let defaults = NSUserDefaults.standardUserDefaults()
+//    var audioPlayer = AVAudioPlayer()
     
     
     override func didMoveToView(view: SKView) {
         super.didMoveToView(view)
         
+        //ELEMENTOS DA HUD
         back = childNodeWithName("back") as! SKSpriteNode
+        countTimeNoteLabel = childNodeWithName("countTimeNoteLabel") as! SKLabelNode
+        countTimeNoteLabel.zPosition = 1
+        
+        //INICIA O CONTADOR DOS TIMER
+        startTimer()
+        
         
         
         //        //        defaults.setBool(true, forKey: "musicLoaded")
@@ -75,6 +96,13 @@ class EaterGameScene: SKScene {
         
         var touch = touches.first as! UITouch
         var touchLocation = touch.locationInNode(self)
+        
+        
+        
+        
+        
+        
+        
         
         
         if back.containsPoint(touchLocation){
@@ -154,6 +182,25 @@ class EaterGameScene: SKScene {
         //            AudioNode!.playSound(RummyAudio.SoundsEnum.SelectButton)
         //            view!.presentScene(menuScene)
         //        }
+        
+    }
+    
+    //EXECUTA A CADA 1 SEGUNDO (Atraves da chamada do startTimer)
+    func addTime(){
+        if timeNote > 4{
+            timeNote = 0
+            countTimeNoteLabel.text = String(timeNote)
+//            println("\(countTimeNoteLabel.text)")
+        }else{
+            timeNote++
+            countTimeNoteLabel.text = String(timeNote)
+//            println("\(countTimeNoteLabel.text)")
+        }
+    }
+    
+    //EXECUTA A CONTAGEM DOS TIMER
+    func startTimer(){
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("addTime"), userInfo: nil, repeats: true)
         
     }
     
