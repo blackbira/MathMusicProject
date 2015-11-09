@@ -68,7 +68,7 @@ class MenuScene: SKScene {
         shopMusic = childNodeWithName("shopMusic") as! SKSpriteNode
         
         //CRIA ANIMACAO DAS NOTAS
-        var note1AnimatedAtlas = SKTextureAtlas (named: "Note1")
+        let note1AnimatedAtlas = SKTextureAtlas (named: "Note1")
         self.prepareFrames(note1AnimatedAtlas)
         self.activeAnimation(selectionScene, animation: note1Animation, key: "note1Anim")
         
@@ -80,16 +80,16 @@ class MenuScene: SKScene {
         
         
         
-        
-        //CRIA UM BOOLEANO PARA ARMAZENAS O STATUS DA MUSICA
-        var musicGame = defaults.boolForKey("musicGame")
-        
-        //CRIA UM BOOLEANO PARA ARMAZENAR O STATUS DO SOM
-        var soundGame = defaults.boolForKey("soundGame")
-        
-        //VERIFICA CARREGAMENTO DA MUSICA
-        var musicLoaded = defaults.boolForKey("musicLoaded")
-        
+//        
+//        //CRIA UM BOOLEANO PARA ARMAZENAS O STATUS DA MUSICA
+//        var musicGame = defaults.boolForKey("musicGame")
+//        
+//        //CRIA UM BOOLEANO PARA ARMAZENAR O STATUS DO SOM
+//        var soundGame = defaults.boolForKey("soundGame")
+//        
+//        //VERIFICA CARREGAMENTO DA MUSICA
+//        var musicLoaded = defaults.boolForKey("musicLoaded")
+//        
         //        defaults.setBool(false, forKey: "musicLoaded")
         
         //        println("Musica\(soundGame)")
@@ -157,29 +157,14 @@ class MenuScene: SKScene {
         //CRIA UM BOOLEANO PARA ARMAZENAR O STATUS DO PRIMEIRO LAUNCH DO JOGO
         secondLaunch = defaults.boolForKey("secondLaunch")
         
-        //DEFINE A CONFIGURACAO DO SOM NO PRIMEIRO LAUNCH
-//        if !secondLaunch {
-//            //HABILITA MUSICA
-//            
-//            MusicSetUp = true
-//            AudioNode!.playMusic(RummyAudio.MusicsEnum.Title)
-//            defaults.setBool(true, forKey: "secondLaunch")
-//            defaults.setBool(true, forKey: "musicLoaded")
-//            defaults.setBool(true, forKey: "musicGame")
-//            //HABILITA SOM
-//            AudioSetUp = true
-//            
-//            defaults.boolForKey("soundGame")
-//            defaults.setBool(true, forKey: "soundGame")
-//            defaults.synchronize()
-//        }
+
         
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
-        var touch = touches.first as! UITouch
-        var touchLocation = touch.locationInNode(self)
+        let touch = touches.first
+        let touchLocation = touch!.locationInNode(self)
         
         
         if selectionScene.containsPoint(touchLocation){
@@ -233,25 +218,29 @@ class MenuScene: SKScene {
     
     //CHAMA CENA DO JOGO TOWER DEFENSE
     func callSelectionScene(){
-        var selectionScene = SelectionScene.unarchiveFromFile("SelectionScene") as! SelectionScene
+        let selectionScene = SelectionScene.unarchiveFromFile("SelectionScene") as! SelectionScene
+        selectionScene.scaleMode = SKSceneScaleMode.AspectFit
         view!.presentScene(selectionScene, transition: transition1)
     }
     
     //CHAMA CENA DO JOGO "PAC-MAN"
     func callEaterGame(){
-        var eaterScene = EaterGameScene.unarchiveFromFile("EaterGameScene") as! EaterGameScene
+        let eaterScene = EaterGameScene.unarchiveFromFile("EaterGameScene") as! EaterGameScene
+        eaterScene.scaleMode = SKSceneScaleMode.AspectFit
         view!.presentScene(eaterScene, transition: transition2)
     }
 
     //CHAMA CENA DO JOGO "CORDA BAMBA"
     func callStringGame(){
-        var stringGame = StringGameScene.unarchiveFromFile("StringGameScene") as! StringGameScene
+        let stringGame = StringGameScene.unarchiveFromFile("StringGameScene") as! StringGameScene
+        stringGame.scaleMode = SKSceneScaleMode.AspectFit
         view!.presentScene(stringGame, transition: transition1)
     }
     
     //CHAMA CENA DA LOJA DE COMPRAS
     func callShopMusicScene(){
-        var shopMusicScene = ShopMusicScene.unarchiveFromFile("ShopMusicScene") as! ShopMusicScene
+        let shopMusicScene = ShopMusicScene.unarchiveFromFile("ShopMusicScene") as! ShopMusicScene
+        shopMusicScene .scaleMode = SKSceneScaleMode.AspectFit
         view!.presentScene(shopMusicScene, transition: transition1)
     }
 
@@ -275,7 +264,7 @@ class MenuScene: SKScene {
             gameScene = SKAction.runBlock({ self.callShopMusicScene() })
             break
         default:
-            println("A cena: \(function) nao existe!")
+            print("A cena: \(function) nao existe!")
             break
         }
         
@@ -290,8 +279,8 @@ class MenuScene: SKScene {
     //PREPARA AS IMAGENS DO PACOTE ATLAS
     func prepareFrames(atlas: SKTextureAtlas){
         for (var i = 0; i < atlas.textureNames.count; i++){
-            var textureName = NSString(format: "Nota%d", i)
-            var textureTemp = atlas.textureNamed(textureName as String)
+            let textureName = NSString(format: "Nota%d", i)
+            let textureTemp = atlas.textureNamed(textureName as String)
             note1Animation.append(textureTemp)
         }
     }

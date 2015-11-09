@@ -73,14 +73,15 @@ class AttackGameScene: SKScene {
         
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
-        var touch = touches.first as! UITouch
-        var touchLocation = touch.locationInNode(self)
+        let touch = touches.first
+        let touchLocation = touch!.locationInNode(self)
         
         
         if back.containsPoint(touchLocation){
-            var menuScene = MenuScene.unarchiveFromFile("MenuScene") as! MenuScene
+            let menuScene = MenuScene.unarchiveFromFile("MenuScene") as! MenuScene
+            menuScene.scaleMode = SKSceneScaleMode.AspectFill
             view!.presentScene(menuScene)
         }
         

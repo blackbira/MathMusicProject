@@ -9,22 +9,23 @@
 /* Begin PBXBuildFile section */
 		44112D851B8CA7DA00263C02 /* StringGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 44112D841B8CA7DA00263C02 /* StringGameScene.sks */; };
 		44112D871B8CA7FB00263C02 /* StringGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44112D861B8CA7FB00263C02 /* StringGameScene.swift */; };
-		44112D8A1B8CAD6D00263C02 /* backgroundGame2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44112D891B8CAD6D00263C02 /* backgroundGame2.jpg */; };
-		44112D8C1B8CADE400263C02 /* backgroundGame3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44112D8B1B8CADE400263C02 /* backgroundGame3.jpg */; };
 		44112D8E1B8CAFC900263C02 /* AttackGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44112D8D1B8CAFC900263C02 /* AttackGameScene.swift */; };
 		44112D901B8CB00400263C02 /* EaterGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44112D8F1B8CB00400263C02 /* EaterGameScene.swift */; };
 		44112D921B8CB02100263C02 /* EaterGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 44112D911B8CB02100263C02 /* EaterGameScene.sks */; };
 		44112D941B8CB13600263C02 /* AttackGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 44112D931B8CB13600263C02 /* AttackGameScene.sks */; };
-		44112D961B8CBAC400263C02 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 44112D951B8CBAC400263C02 /* back.png */; };
-		4449180E1B8F40FB00DD81E1 /* eaterGameScene.png in Resources */ = {isa = PBXBuildFile; fileRef = 4449180D1B8F40FB00DD81E1 /* eaterGameScene.png */; };
-		444918101B8F41FA00DD81E1 /* stringGameScene.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4449180F1B8F41FA00DD81E1 /* stringGameScene.jpg */; };
-		444918121B8F475100DD81E1 /* colcheia.png in Resources */ = {isa = PBXBuildFile; fileRef = 444918111B8F475100DD81E1 /* colcheia.png */; };
 		444918141B8F58D800DD81E1 /* ShopMusicScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444918131B8F58D800DD81E1 /* ShopMusicScene.swift */; };
 		444918161B8F58F400DD81E1 /* ShopMusicScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 444918151B8F58F400DD81E1 /* ShopMusicScene.sks */; };
-		444918181B8F6CD400DD81E1 /* backgroundShopMusic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 444918171B8F6CD400DD81E1 /* backgroundShopMusic.jpg */; };
-		4449181C1B8F70AA00DD81E1 /* shopMusic.png in Resources */ = {isa = PBXBuildFile; fileRef = 4449181B1B8F70AA00DD81E1 /* shopMusic.png */; };
 		4449181E1B8F7FC500DD81E1 /* SelectionScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4449181D1B8F7FC500DD81E1 /* SelectionScene.sks */; };
 		444918201B8F7FD600DD81E1 /* SelectionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4449181F1B8F7FD600DD81E1 /* SelectionScene.swift */; };
+		445357011BE00DD2007C767E /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 445356F81BE00DD2007C767E /* back.png */; };
+		445357021BE00DD2007C767E /* backgroundGame2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 445356F91BE00DD2007C767E /* backgroundGame2.jpg */; };
+		445357031BE00DD2007C767E /* backgroundGame3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 445356FA1BE00DD2007C767E /* backgroundGame3.jpg */; };
+		445357041BE00DD2007C767E /* backgroundShopMusic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 445356FB1BE00DD2007C767E /* backgroundShopMusic.jpg */; };
+		445357051BE00DD2007C767E /* colcheia.png in Resources */ = {isa = PBXBuildFile; fileRef = 445356FC1BE00DD2007C767E /* colcheia.png */; };
+		445357061BE00DD2007C767E /* eaterGameScene.png in Resources */ = {isa = PBXBuildFile; fileRef = 445356FD1BE00DD2007C767E /* eaterGameScene.png */; };
+		445357071BE00DD2007C767E /* menuBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 445356FE1BE00DD2007C767E /* menuBackground.jpg */; };
+		445357081BE00DD2007C767E /* shopMusic.png in Resources */ = {isa = PBXBuildFile; fileRef = 445356FF1BE00DD2007C767E /* shopMusic.png */; };
+		445357091BE00DD2007C767E /* stringGameScene.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 445357001BE00DD2007C767E /* stringGameScene.jpg */; };
 		447DA6031B88C7B000943378 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DA6021B88C7B000943378 /* AppDelegate.swift */; };
 		447DA6051B88C7B000943378 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 447DA6041B88C7B000943378 /* GameScene.sks */; };
 		447DA6071B88C7B000943378 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DA6061B88C7B000943378 /* GameScene.swift */; };
@@ -35,7 +36,6 @@
 		447DA61D1B88C7B000943378 /* MathMusicProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DA61C1B88C7B000943378 /* MathMusicProjectTests.swift */; };
 		447DA6271B88C9D200943378 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DA6261B88C9D200943378 /* MenuScene.swift */; };
 		447DA6291B88C9E600943378 /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 447DA6281B88C9E600943378 /* MenuScene.sks */; };
-		447DA62F1B88CEB800943378 /* menuBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 447DA62E1B88CEB800943378 /* menuBackground.jpg */; };
 		447DA6331B88D99800943378 /* Note1.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 447DA6321B88D99800943378 /* Note1.atlas */; };
 /* End PBXBuildFile section */
 
@@ -52,22 +52,23 @@
 /* Begin PBXFileReference section */
 		44112D841B8CA7DA00263C02 /* StringGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StringGameScene.sks; sourceTree = "<group>"; };
 		44112D861B8CA7FB00263C02 /* StringGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringGameScene.swift; sourceTree = "<group>"; };
-		44112D891B8CAD6D00263C02 /* backgroundGame2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundGame2.jpg; sourceTree = "<group>"; };
-		44112D8B1B8CADE400263C02 /* backgroundGame3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundGame3.jpg; sourceTree = "<group>"; };
 		44112D8D1B8CAFC900263C02 /* AttackGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttackGameScene.swift; sourceTree = "<group>"; };
 		44112D8F1B8CB00400263C02 /* EaterGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EaterGameScene.swift; sourceTree = "<group>"; };
 		44112D911B8CB02100263C02 /* EaterGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EaterGameScene.sks; sourceTree = "<group>"; };
 		44112D931B8CB13600263C02 /* AttackGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = AttackGameScene.sks; sourceTree = "<group>"; };
-		44112D951B8CBAC400263C02 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
-		4449180D1B8F40FB00DD81E1 /* eaterGameScene.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eaterGameScene.png; sourceTree = "<group>"; };
-		4449180F1B8F41FA00DD81E1 /* stringGameScene.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stringGameScene.jpg; sourceTree = "<group>"; };
-		444918111B8F475100DD81E1 /* colcheia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = colcheia.png; sourceTree = "<group>"; };
 		444918131B8F58D800DD81E1 /* ShopMusicScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopMusicScene.swift; sourceTree = "<group>"; };
 		444918151B8F58F400DD81E1 /* ShopMusicScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ShopMusicScene.sks; sourceTree = "<group>"; };
-		444918171B8F6CD400DD81E1 /* backgroundShopMusic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundShopMusic.jpg; sourceTree = "<group>"; };
-		4449181B1B8F70AA00DD81E1 /* shopMusic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shopMusic.png; sourceTree = "<group>"; };
 		4449181D1B8F7FC500DD81E1 /* SelectionScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SelectionScene.sks; sourceTree = "<group>"; };
 		4449181F1B8F7FD600DD81E1 /* SelectionScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionScene.swift; sourceTree = "<group>"; };
+		445356F81BE00DD2007C767E /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		445356F91BE00DD2007C767E /* backgroundGame2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundGame2.jpg; sourceTree = "<group>"; };
+		445356FA1BE00DD2007C767E /* backgroundGame3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundGame3.jpg; sourceTree = "<group>"; };
+		445356FB1BE00DD2007C767E /* backgroundShopMusic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundShopMusic.jpg; sourceTree = "<group>"; };
+		445356FC1BE00DD2007C767E /* colcheia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = colcheia.png; sourceTree = "<group>"; };
+		445356FD1BE00DD2007C767E /* eaterGameScene.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eaterGameScene.png; sourceTree = "<group>"; };
+		445356FE1BE00DD2007C767E /* menuBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = menuBackground.jpg; sourceTree = "<group>"; };
+		445356FF1BE00DD2007C767E /* shopMusic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shopMusic.png; sourceTree = "<group>"; };
+		445357001BE00DD2007C767E /* stringGameScene.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stringGameScene.jpg; sourceTree = "<group>"; };
 		447DA5FD1B88C7B000943378 /* MathMusicProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathMusicProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		447DA6011B88C7B000943378 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		447DA6021B88C7B000943378 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,7 +83,6 @@
 		447DA61C1B88C7B000943378 /* MathMusicProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathMusicProjectTests.swift; sourceTree = "<group>"; };
 		447DA6261B88C9D200943378 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		447DA6281B88C9E600943378 /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
-		447DA62E1B88CEB800943378 /* menuBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = menuBackground.jpg; sourceTree = "<group>"; };
 		447DA6321B88D99800943378 /* Note1.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Note1.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,14 +107,6 @@
 		44112D881B8CAD5400263C02 /* PlaceHolder */ = {
 			isa = PBXGroup;
 			children = (
-				44112D951B8CBAC400263C02 /* back.png */,
-				4449180F1B8F41FA00DD81E1 /* stringGameScene.jpg */,
-				444918171B8F6CD400DD81E1 /* backgroundShopMusic.jpg */,
-				4449180D1B8F40FB00DD81E1 /* eaterGameScene.png */,
-				44112D8B1B8CADE400263C02 /* backgroundGame3.jpg */,
-				4449181B1B8F70AA00DD81E1 /* shopMusic.png */,
-				444918111B8F475100DD81E1 /* colcheia.png */,
-				44112D891B8CAD6D00263C02 /* backgroundGame2.jpg */,
 			);
 			name = PlaceHolder;
 			sourceTree = "<group>";
@@ -204,7 +196,15 @@
 		447DA62B1B88CE1B00943378 /* Backgrounds */ = {
 			isa = PBXGroup;
 			children = (
-				447DA62E1B88CEB800943378 /* menuBackground.jpg */,
+				445356F81BE00DD2007C767E /* back.png */,
+				445356F91BE00DD2007C767E /* backgroundGame2.jpg */,
+				445356FA1BE00DD2007C767E /* backgroundGame3.jpg */,
+				445356FB1BE00DD2007C767E /* backgroundShopMusic.jpg */,
+				445356FC1BE00DD2007C767E /* colcheia.png */,
+				445356FD1BE00DD2007C767E /* eaterGameScene.png */,
+				445356FE1BE00DD2007C767E /* menuBackground.jpg */,
+				445356FF1BE00DD2007C767E /* shopMusic.png */,
+				445357001BE00DD2007C767E /* stringGameScene.jpg */,
 			);
 			name = Backgrounds;
 			sourceTree = "<group>";
@@ -268,7 +268,9 @@
 		447DA5F51B88C7B000943378 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Bebip;
 				TargetAttributes = {
 					447DA5FC1B88C7B000943378 = {
@@ -304,26 +306,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				445357061BE00DD2007C767E /* eaterGameScene.png in Resources */,
 				447DA6331B88D99800943378 /* Note1.atlas in Resources */,
 				4449181E1B8F7FC500DD81E1 /* SelectionScene.sks in Resources */,
-				44112D8C1B8CADE400263C02 /* backgroundGame3.jpg in Resources */,
-				4449180E1B8F40FB00DD81E1 /* eaterGameScene.png in Resources */,
 				44112D941B8CB13600263C02 /* AttackGameScene.sks in Resources */,
 				44112D851B8CA7DA00263C02 /* StringGameScene.sks in Resources */,
-				444918181B8F6CD400DD81E1 /* backgroundShopMusic.jpg in Resources */,
 				44112D921B8CB02100263C02 /* EaterGameScene.sks in Resources */,
 				447DA6111B88C7B000943378 /* LaunchScreen.xib in Resources */,
-				444918121B8F475100DD81E1 /* colcheia.png in Resources */,
-				44112D961B8CBAC400263C02 /* back.png in Resources */,
 				447DA60E1B88C7B000943378 /* Images.xcassets in Resources */,
-				444918101B8F41FA00DD81E1 /* stringGameScene.jpg in Resources */,
-				44112D8A1B8CAD6D00263C02 /* backgroundGame2.jpg in Resources */,
+				445357051BE00DD2007C767E /* colcheia.png in Resources */,
+				445357091BE00DD2007C767E /* stringGameScene.jpg in Resources */,
 				447DA6051B88C7B000943378 /* GameScene.sks in Resources */,
+				445357081BE00DD2007C767E /* shopMusic.png in Resources */,
+				445357011BE00DD2007C767E /* back.png in Resources */,
 				447DA6291B88C9E600943378 /* MenuScene.sks in Resources */,
 				444918161B8F58F400DD81E1 /* ShopMusicScene.sks in Resources */,
-				447DA62F1B88CEB800943378 /* menuBackground.jpg in Resources */,
+				445357041BE00DD2007C767E /* backgroundShopMusic.jpg in Resources */,
+				445357031BE00DD2007C767E /* backgroundGame3.jpg in Resources */,
+				445357021BE00DD2007C767E /* backgroundGame2.jpg in Resources */,
+				445357071BE00DD2007C767E /* menuBackground.jpg in Resources */,
 				447DA60C1B88C7B000943378 /* Main.storyboard in Resources */,
-				4449181C1B8F70AA00DD81E1 /* shopMusic.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +414,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -427,7 +430,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -466,7 +469,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -479,7 +482,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MathMusicProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "bira.com.Bedip.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -490,7 +495,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MathMusicProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "bira.com.Bedip.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -500,16 +507,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = MathMusicProjectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "bira.com.Bedip.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MathMusicProject.app/MathMusicProject";
 			};
@@ -519,12 +523,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = MathMusicProjectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "bira.com.Bedip.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MathMusicProject.app/MathMusicProject";
 			};

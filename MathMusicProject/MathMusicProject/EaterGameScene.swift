@@ -6,17 +6,36 @@
 //  Copyright (c) 2015 Bebip. All rights reserved.
 //
 
+
+/*
+OBSERVACOES:
+
+Devido ao trabalho estar senfo feito com a Escala em AspectFit sera considereado
+para as margens laterias 150 pixels para cada lado, tornando o campo utilizado
+entre as dimensoes de -150 ate 2198
+
+*/
+
 import SpriteKit
 import AVFoundation
 
 class EaterGameScene: SKScene {
     
     //BOTOES
-    var back: SKSpriteNode = SKSpriteNode()
-
+    var back = SKSpriteNode()
+    var backgroundEaterGame = SKSpriteNode()
     
     //NOTAS
-    var colcheia = SKTexture (imageNamed: "colcheia.png")
+//    var colcheia = SKTexture (imageNamed: "colcheia.png")
+    
+    //IDENTIFICADOR DOS OBJETOS CRIADOS
+    var id = 0
+    
+    //LIMITES DA TELA
+    let limitXNegative:CGFloat = -150
+    let limitXPositive:CGFloat = 2198
+    let limitYNegative:CGFloat = 0
+    let limitYPositive:CGFloat = 1536
     
     
     //TIMER
@@ -26,171 +45,58 @@ class EaterGameScene: SKScene {
     //TEMPORARIO
     var countTimeNoteLabel: SKLabelNode = SKLabelNode()
     
-    
-    
-    
-//    var musicOn: SKSpriteNode = SKSpriteNode()
-//    var soundOn: SKSpriteNode = SKSpriteNode()
-//    var colorBlindOn: SKSpriteNode = SKSpriteNode()
-//    
-//    var soundGame: Bool = Bool()
-//    var musicGame: Bool = Bool()
-//    var colorBlind: Bool = Bool()
-//    var daltonicoMode: Bool = Bool()
-//    
-//    let defaults = NSUserDefaults.standardUserDefaults()
-//    var audioPlayer = AVAudioPlayer()
-    
-    
+
     override func didMoveToView(view: SKView) {
         super.didMoveToView(view)
-        
-        //ELEMENTOS DA HUD
-        back = childNodeWithName("back") as! SKSpriteNode
-        countTimeNoteLabel = childNodeWithName("countTimeNoteLabel") as! SKLabelNode
-        countTimeNoteLabel.zPosition = 1
         
         //INICIA O CONTADOR DOS TIMER
         startTimer()
         
+        //CONSTROI A CENA
+        createObjectsInScene()
         
-        
-        //        //        defaults.setBool(true, forKey: "musicLoaded")
-        //
-        //        var back = childNodeWithName("back") as! SKSpriteNode
-        //
-        //        musicOn = childNodeWithName("musicOn") as! SKSpriteNode
-        //        soundOn = childNodeWithName("soundOn") as! SKSpriteNode
-        //        colorBlindOn = childNodeWithName("modeColorBlindOn") as! SKSpriteNode
-        //
-        //        musicGame = defaults.boolForKey("musicGame")
-        //        soundGame = defaults.boolForKey("soundGame")
-        //        daltonicoMode = defaults.boolForKey("daltonicoMode")
-        //
-        //        colorBlind = defaults.boolForKey("colorBlind")
-        //
-        //        //DEFINE MUSICA
-        //        if musicGame{
-        //            musicOn.alpha = 1
-        //        }else{
-        //            musicOn.alpha = 0
-        //        }
-        //
-        //        //DEFINE SOM
-        //        if soundGame{
-        //            soundOn.alpha = 1
-        //        }else{
-        //            soundOn.alpha = 0
-        //        }
-        //
-        //        //DEFINE MODO DALTONICO
-        //        if colorBlind{
-        //            colorBlindOn.alpha = 1
-        //        }else{
-        //            colorBlindOn.alpha = 0
-        //        }
+//        //DEFINE E PREAPARA AS ANIMACOES PARA O TAMANDUA
+//        definesAnimalAnimationsAndCreateActions()
+//        
+//        //CRIA AS ACTIONS DA ESTEIRA E ITENS
+//        createActions()
+//        
+//        //INICIALIZA TEMPO DO JOGO
+//        startTimer()
+
         
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
-        var touch = touches.first as! UITouch
-        var touchLocation = touch.locationInNode(self)
-        
-        
+        let touch = touches.first
+        let touchLocation = touch!.locationInNode(self)
         
         
-        
+//        print("Toque: X(\(touchLocation.x) e Y:(\(touchLocation.y)))")
         
         
         
         
+        
+        
+        //Botao que volta para o menu
         if back.containsPoint(touchLocation){
-            var menuScene = MenuScene.unarchiveFromFile("MenuScene") as! MenuScene
+            let menuScene = MenuScene.unarchiveFromFile("MenuScene") as! MenuScene
+            menuScene.scaleMode = SKSceneScaleMode.AspectFit
             view!.presentScene(menuScene)
         }
-        
-        
-        
-        //        if self.childNodeWithName("musicOn")!.containsPoint(touchLocation){
-        //            if musicGame {
-        //                AudioNode!.playSound(RummyAudio.SoundsEnum.SelectConfig)
-        //                musicOn.alpha = 0
-        //                musicGame = false
-        //                defaults.setObject(false, forKey: "musicGame")
-        //
-        //                AudioNode?.stopMusic()
-        //                MusicSetUp = musicGame
-        //
-        //
-        //
-        //            }else{
-        //                AudioNode!.playSound(RummyAudio.SoundsEnum.SelectConfig)
-        //                musicOn.alpha = 1
-        //                musicGame = true
-        //                defaults.setObject(true, forKey: "musicGame")
-        //
-        //                MusicSetUp = musicGame
-        //                AudioNode!.playMusic(RummyAudio.MusicsEnum.Title)
-        //
-        //            }
-        //            defaults.synchronize()
-        //        }
-        //
-        //        if self.childNodeWithName("soundOn")!.containsPoint(touchLocation){
-        //            if soundGame {
-        //                soundOn.alpha = 0
-        //                soundGame = false
-        //                defaults.setObject(false, forKey: "soundGame")
-        //
-        //                AudioNode!.playSound(RummyAudio.SoundsEnum.SelectConfig)
-        //                AudioSetUp = soundGame
-        //
-        //            }else{
-        //                soundOn.alpha = 1
-        //                soundGame = true
-        //                defaults.setObject(true, forKey: "soundGame")
-        //
-        //                AudioSetUp = soundGame
-        //                AudioNode!.playSound(RummyAudio.SoundsEnum.SelectConfig)
-        //            }
-        //            defaults.synchronize()
-        //        }
-        //
-        //
-        //        if self.childNodeWithName("modeColorBlindOn")!.containsPoint(touchLocation){
-        //            if !colorBlind {
-        //                AudioNode!.playSound(RummyAudio.SoundsEnum.SelectConfig)
-        //                colorBlindOn.alpha = 1
-        //                colorBlind = true
-        //                defaults.setObject(colorBlind, forKey: "colorBlind")
-        //                daltonicoMode = true
-        //                defaults.setObject(true, forKey: "daltonicoMode")
-        //            }else{
-        //                AudioNode!.playSound(RummyAudio.SoundsEnum.SelectConfig)
-        //                colorBlindOn.alpha = -1
-        //                colorBlind = false
-        //                defaults.setObject(colorBlind, forKey: "colorBlind")
-        //                daltonicoMode = false
-        //                defaults.setObject(false, forKey: "daltonicoMode")
-        //            }
-        //            defaults.synchronize()
-        //        }
-        //        
-        //        if self.childNodeWithName("back")!.containsPoint(touchLocation){
-        //            var menuScene = MenuScene.unarchiveFromFile("MenuScene") as! MenuScene
-        //            AudioNode!.playSound(RummyAudio.SoundsEnum.SelectButton)
-        //            view!.presentScene(menuScene)
-        //        }
         
     }
     
     //EXECUTA A CADA 1 SEGUNDO (Atraves da chamada do startTimer)
-    func addTime(){
-        if timeNote > 4{
+    func countTimeToCreationANote(){
+        if timeNote > 1{
             timeNote = 0
             countTimeNoteLabel.text = String(timeNote)
-//            println("\(countTimeNoteLabel.text)")
+            removeOldNote()
+            createNote()
+            
         }else{
             timeNote++
             countTimeNoteLabel.text = String(timeNote)
@@ -200,8 +106,77 @@ class EaterGameScene: SKScene {
     
     //EXECUTA A CONTAGEM DOS TIMER
     func startTimer(){
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("addTime"), userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("countTimeToCreationANote"), userInfo: nil, repeats: true)
         
     }
     
+    //CONFIGURA E POSICIONA OS ELEMENTOS NA CENA
+    func createObjectsInScene(){
+    
+        //ELEMENTOS DA HUD
+        back = childNodeWithName("back") as! SKSpriteNode
+        countTimeNoteLabel = childNodeWithName("countTimeNoteLabel") as! SKLabelNode
+        backgroundEaterGame = childNodeWithName("backgroundEaterGame") as! SKSpriteNode
+        
+        
+    }
+    
+    //CRIA E POSICIONA A NOTA RANDOMICAMENTE NA TELA
+    func createNote(){
+        
+        //Determina a posicao de criacao das notas
+        let randPosX = arc4random_uniform(UInt32(backgroundEaterGame.frame.width))
+        let randPosY = arc4random_uniform(UInt32(backgroundEaterGame.frame.height))
+        
+        //Determina qual nota sera criada
+        
+        //Adiciona a nota na cena
+        let newNote = SKSpriteNode (imageNamed: "colcheia.png")
+        newNote.zPosition = 1
+        newNote.position = CGPointMake(CGFloat(randPosX), CGFloat(randPosY))
+        newNote.name = String(id)
+        id++
+        
+        //Corrige a posicao de criacao da nota no eixo X
+        //Correcao para X negativo
+        var fixedXNegative = newNote.position.x - newNote.frame.width/2
+        if fixedXNegative < limitXNegative{
+            fixedXNegative -= limitXNegative
+            newNote.position.x -= fixedXNegative
+        }
+        
+        //Correcao para X positivo
+        var fixedXPositive = newNote.position.x + newNote.frame.width/2
+        if fixedXPositive > limitXPositive{
+            fixedXPositive -= limitXPositive
+            newNote.position.x -= fixedXPositive
+        }
+        
+        //Corrige a posicao de criacao da nota no eixo Y
+        //Correcao para Y negativo
+        var fixedYNegative = newNote.position.y - newNote.frame.height/2
+        if fixedYNegative < limitYNegative{
+            fixedYNegative -= limitYNegative
+            newNote.position.y -= fixedYNegative
+        }
+        
+        //Correcao para Y positivo
+        var fixedYPositive = newNote.position.y + newNote.frame.height/2
+        if fixedYPositive > limitYPositive{
+            fixedYPositive -= limitYPositive
+            newNote.position.y -= fixedYPositive
+        }
+        
+        addChild(newNote)
+    }
+    
+    //REMOVE A NOTA ANTIGA
+    func removeOldNote(){
+        for note in self.children{
+            if note.name == String(id-1){
+                note.removeFromParent()
+                return
+            }
+        }
+    }
 }
